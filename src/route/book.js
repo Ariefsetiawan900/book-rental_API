@@ -6,22 +6,19 @@ const auth = require('../helper/auth')
 route 
     // .all('*',auth.authInfo)
     .get('/',book.getBook) // pagination
+    .get('/sortdate',book.sortDate) //sorting by date
+    .get('/sortgenre',book.sortGenre) //sorting by genre
+    .get('/sorttitle',book.sortTitle) //sorting by title
     .get('/:booktitle',book.searchBookTitle) //search
-    .get('/sortgenre',book.sortGenre)
-    .get('/sorttitle',book.sortTitle)
     .get('/sortavailable',book.sortAvailable)
-    .get('/sortdate',book.sortDate)
     .get('/:id',book.getBookById)
-   
     
+    
+    .post('/addbook', book.addBook) // ADD BOOK
 
-    // ADD BOOK
-    .post('/addbook', book.addBook)
     .patch('/:idbook',book.updateBook)
-        // available
-    .patch('/a/:idbook',book.returnBook)
-    // borrow book
-    .patch('/rent/:idbook',book.rentBook)
+    .patch('/return/:idbook',book.returnBook)  // return
+    .patch('/rent/:idbook',book.rentBook) // borrow book
 
     .delete('/:idbook', book.deleteBook)
 

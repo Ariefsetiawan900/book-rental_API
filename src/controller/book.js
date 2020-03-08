@@ -156,8 +156,8 @@ module.exports ={
                     response.response(res,null,404,"Id Book No found")
                 })
             }else {
-                response.response(res,result,200,null,"buku sudah dipinjam")
-                console.log("buku sudah dipinjam");
+                response.response(res,result,200,null,"book already borrowed")
+                console.log("book already borrowed");
               
             }
            

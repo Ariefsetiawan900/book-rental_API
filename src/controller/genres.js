@@ -13,7 +13,7 @@ module.exports ={
     },
     addGenres : (req,res) =>{
         let data = {
-            nama : req.body.nama,
+            genre_name : req.body.genre_name,
             
 
         } 
@@ -33,7 +33,7 @@ module.exports ={
     updateGenres : (req,res)=>{
         const idgenres = req.params.idgenres
         const data = {
-            nama : req.body.nama,
+            genre_name : req.body.genre_name,
             
         }
         // console.log(data)
@@ -43,7 +43,7 @@ module.exports ={
             })
             .catch((err)=>{
                 console.log(err)
-                response.response(res,null,404,"Id Genres No found")
+                response.response(res,null,404,"Id genres No found")
             })
     },
     deleteGenres : (req,res)=>{
@@ -55,7 +55,7 @@ module.exports ={
             })
             .catch((err)=>{
                 console.log(err)
-                response.response(res,null,404,"Id Genres No found")
+                response.response(res,null,404,"Id genres No found")
             })
     },
 
