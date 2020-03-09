@@ -1,5 +1,5 @@
 <h1>BOOK RENTAL API</h1>
-<h3>By : Arief Setiawan (arief.setiawan8788@gmail.com</h3>
+<h3>By : Arief Setiawan (arief.setiawan8788@gmail.com)</h3>
 <p>the source of my assignment : http://bit.ly/assignment-fasttrack</p>
 <h3>My Tools</h3>
 <ul> 
